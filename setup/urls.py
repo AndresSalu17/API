@@ -19,12 +19,13 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from appandres.views import ProjetosAndresViewset
+from appandres.views import ParticipantesProjetoViewSet, ProjetosAndresViewset
 
 router = routers.DefaultRouter()
 
 
 router.register(r'projetos', ProjetosAndresViewset)
+router.register(r'participantes', ParticipantesProjetoViewSet)
 
 
 urlpatterns = [
