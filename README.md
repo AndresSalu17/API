@@ -2,7 +2,7 @@
  Repositorio do Andres
 
 
- Python
+Python
 1- Criar ambiente virtual
 python -m venv .venv
 
@@ -30,5 +30,11 @@ python manage.py migrate
 7-Criar um super usuário
 python manage.py createsuperuser
 
-8- Quando precisar do env
+8- Quando precisar do env(BAIXAR BIBLIOTECA)
 pip install python-decouple
+
+9-Desinstalar uma lib
+pip uninstall python-decouple
+
+10- Quando for atualizar meus requirements
+pip freeze > requirements.txt
