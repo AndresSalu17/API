@@ -34,7 +34,6 @@ class ParticipantesProjeto(models.Model):
     nome = models.CharField(max_length=150)
     email = models.CharField(max_length=150, null=True, blank=True)
     area = models.IntegerField(choices=TIPO_AREA)
-    contrato = models.IntegerField
     
     def __str__(self):
         return str(self.id)
@@ -44,7 +43,8 @@ class ParticipantesProjeto(models.Model):
         
 class ContratoParticipantes(models.Model):
     id_projeto_andres = models.ForeignKey(ProjetosAndres, on_delete=models.CASCADE)
-    duracao = models.IntegerField()
+    data_inicio = models.IntegerField()
+    data_fim = models.IntegerField()
     valor_contrato = models.IntegerField()
     SITUACAO_CONT = (
         (1, 'Ativo'),

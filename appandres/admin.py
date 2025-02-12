@@ -17,6 +17,6 @@ class ParticipantesProjetoAdmin(admin.ModelAdmin):
 admin.site.register(ParticipantesProjeto, ParticipantesProjetoAdmin)
 
 class ContratoParticipantesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'duracao', 'valor_contrato', 'situacao', 'resumo')
+    list_display = ('id', 'data_inicio','data_fim', 'valor_contrato', 'situacao', 'resumo')
     list_filter = ('id',)
 admin.site.register(ContratoParticipantes, ContratoParticipantesAdmin)
