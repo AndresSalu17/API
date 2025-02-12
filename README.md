@@ -38,3 +38,9 @@ pip uninstall python-decouple
 
 10- Quando for atualizar meus requirements
 pip freeze > requirements.txt
+
+11- Comando para criar uma nova branch
+git checkout -b "Versao1"
+
+12- Comando para TROCAR de branch
+git checkout "Versao1"
