@@ -3,8 +3,8 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
-from appandres.models import ParticipantesProjeto, ProjetosAndres
-from appandres.serializers import ParticipantesProjetoSerializer, ProjetoAndresSerializer
+from appandres.models import ContratoParticipantes, ParticipantesProjeto, ProjetosAndres
+from appandres.serializers import ContratoParticipantesSerializer, ParticipantesProjetoSerializer, ProjetoAndresSerializer
 
 # Create your views here.
 
@@ -23,4 +23,11 @@ class ParticipantesProjetoViewSet(viewsets.ModelViewSet):
     serializer_class = ParticipantesProjetoSerializer
     ordering_field = ('id',)
     filterset_fields = ('id', 'nome', 'area')
+    
+class ContratoParticipantesViewSet(viewsets.ModelViewSet):
+    queryset = ContratoParticipantes.objects.all()
+    permission_classes = [IsAuthenticated]
+    serializer_class = ContratoParticipantesSerializer
+    ordering_field = ('id',)
+    
     

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from appandres.models import ParticipantesProjeto, ProjetosAndres
+from appandres.models import ContratoParticipantes, ParticipantesProjeto, ProjetosAndres
 
 # Register your models here.
 
@@ -14,4 +14,9 @@ class ParticipantesProjetoAdmin(admin.ModelAdmin):
     list_display = ('id', 'id_projeto_andres', 'nome', 'email', 'area')
     list_filter = ('id', 'area')
     search_fields = ('id', 'nome')
-admin.site.register(ParticipantesProjeto, ParticipantesProjetoAdmin)    
+admin.site.register(ParticipantesProjeto, ParticipantesProjetoAdmin)
+
+class ContratoParticipantesAdmin(admin.ModelAdmin):
+    list_display = ('id', 'duracao', 'valor_contrato', 'situacao', 'resumo')
+    list_filter = ('id',)
+admin.site.register(ContratoParticipantes, ContratoParticipantesAdmin)
